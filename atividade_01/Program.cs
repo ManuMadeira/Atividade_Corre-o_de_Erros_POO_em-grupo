@@ -11,9 +11,9 @@ internal class Program
         int idade = int.Parse(Console.ReadLine()!); // ! afirmando que o valor não será nulo
         Console.WriteLine("Por fim, digite sua altura em metros (ex: 1,80):");
         float altura = float.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture); //CS8604 - ! afirmando que o valor não será nulo, Alem do CultureInfo.InvariantCulture para a altura
-                                                                                       //Console.writeline($"Resumo do Cadastro: Nome: {PrimeiroNome}, Idade: {idade} anos, Altura: {altura}m.") //E6 - CS0103 -String "primeironome esta ecrita diferente de como foi nomenclata"
+        //DIConsole.writeline($"Resumo do Cadastro: Nome: {PrimeiroNome}, Idade: {idade} anos, Altura: {altura}m."); //E6 - CS0103 -String "primeiroNome" esta escrita diferente de como foi definida"
                                                                                        //E5 - CS0117 - Console. nao tem a definição writeline, deveria ser WriteLine, com as respectivas letras maisusculas
-        Console.WriteLine($"Resumo do Cadastro: Nome: {primeiroNome}, Idade: {idade} anos, Altura: {altura.ToString("0,00", CultureInfo.InvariantCulture)}m.");
+        Console.WriteLine($"Resumo do Cadastro: Nome: {primeiroNome}, Idade: {idade} anos, Altura: {altura.ToString("0.00", CultureInfo.InvariantCulture)}m.");
     }
 
 }
